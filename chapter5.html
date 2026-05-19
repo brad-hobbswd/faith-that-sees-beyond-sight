@@ -48,6 +48,16 @@ padding:40px 20px;
 
 }
 
+.page-wrap{
+
+display:flex;
+
+flex-direction:column;
+
+min-height:100vh;
+
+}
+
 .container{
 
 max-width:900px;
@@ -137,6 +147,12 @@ opacity:.75;
 
 }
 
+#footer{
+
+margin-top:50px;
+
+}
+
 @media(max-width:768px){
 
 .container{
@@ -163,6 +179,8 @@ flex-direction:column;
 </head>
 
 <body>
+
+<div class="page-wrap">
 
 <div class="container">
 
@@ -343,6 +361,20 @@ Next →
 Faith discovers strength during moments that attempt to reveal fear.
 
 </div>
+
+</div>
+
+<div id="footer"></div>
+
+<script>
+fetch("footer.html")
+.then(response=>response.text())
+.then(data=>{
+document.getElementById(
+"footer"
+).innerHTML=data;
+});
+</script>
 
 </div>
 
