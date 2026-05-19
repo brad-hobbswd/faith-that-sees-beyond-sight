@@ -224,16 +224,17 @@ Return Home
 
 </a>
 
-<div class="footer">
+<div id="footer"></div>
 
-Faith That Sees Beyond Sight
-
-<br><br>
-
-Jesus already knows the way forward.
-
-</div>
-
+<script>
+fetch("footer.html")
+.then(response=>response.text())
+.then(data=>{
+document.getElementById(
+"footer"
+).innerHTML=data;
+});
+</script>
 </div>
 
 </body>
