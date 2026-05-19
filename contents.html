@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Contents | Faith That Sees Beyond Sight
+</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--night:#091722;
+--blue:#132636;
+--gold:#f0c46a;
+--light:#f5f5f5;
+
+}
+
+body{
+
+font-family:Georgia,serif;
+
+background:
+linear-gradient(
+to bottom,
+#091722,
+#12293a,
+#091722
+);
+
+color:var(--light);
+
+line-height:1.9;
+
+padding:40px 20px;
+
+}
+
+.page-wrap{
+
+display:flex;
+
+flex-direction:column;
+
+min-height:100vh;
+
+}
+
+.container{
+
+max-width:850px;
+
+margin:auto;
+
+background:#132636;
+
+padding:70px;
+
+border-radius:25px;
+
+box-shadow:
+0 0 35px rgba(0,0,0,.35);
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:3rem;
+
+color:var(--gold);
+
+margin-bottom:50px;
+
+}
+
+.contents-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.contents-list a{
+
+display:block;
+
+padding:18px 24px;
+
+background:#1a3244;
+
+color:var(--light);
+
+text-decoration:none;
+
+border-radius:15px;
+
+transition:.3s;
+
+font-size:1.08rem;
+
+}
+
+.contents-list a:hover{
+
+transform:translateX(8px);
+
+background:#213d53;
+
+}
+
+.footer{
+
+text-align:center;
+
+margin-top:50px;
+
+opacity:.75;
+
+}
+
+#footer{
+
+margin-top:50px;
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+padding:35px;
+
+}
+
+h1{
+
+font-size:2.2rem;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page-wrap">
+
+<div class="container">
+
+<h1>
+Contents
+</h1>
+
+<div class="contents-list">
+
+<a href="dedication.html">
+Dedication
+</a>
+
+<a href="introduction.html">
+Introduction
+</a>
+
+<a href="chapter1.html">
+Chapter One • The Weight of What Cannot Be Seen
+</a>
+
+<a href="chapter2.html">
+Chapter Two • The Unseen Path Begins to Move
+</a>
+
+<a href="chapter3.html">
+Chapter Three • The Vision of the Crowded Room
+</a>
+
+<a href="chapter4.html">
+Chapter Four • The Mountain of Quiet Decisions
+</a>
+
+<a href="chapter5.html">
+Chapter Five • The Test that Reveals the Truth
+</a>
+
+<a href="chapter6.html">
+Chapter Six • The Unseen Made Visible
+</a>
+
+<a href="closing.html">
+Closing
+</a>
+
+</div>
+
+<div class="footer">
+
+Choose a chapter and continue the journey.
+
+</div>
+
+</div>
+
+<div id="footer"></div>
+
+<script>
+fetch("footer.html")
+.then(response=>response.text())
+.then(data=>{
+document.getElementById(
+"footer"
+).innerHTML=data;
+});
+</script>
+
+</div>
+
+</body>
+</html>
