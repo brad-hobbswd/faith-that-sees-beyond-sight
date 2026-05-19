@@ -44,15 +44,23 @@ color:var(--light);
 
 min-height:100vh;
 
+padding:30px;
+
+text-align:center;
+
+}
+
+.page-wrap{
+
 display:flex;
+
+flex-direction:column;
 
 align-items:center;
 
 justify-content:center;
 
-padding:30px;
-
-text-align:center;
+min-height:100vh;
 
 }
 
@@ -145,14 +153,6 @@ opacity:.85;
 
 }
 
-.footer{
-
-margin-top:50px;
-
-opacity:.7;
-
-}
-
 @media(max-width:768px){
 
 .container{
@@ -179,6 +179,8 @@ font-size:2rem;
 </head>
 
 <body>
+
+<div class="page-wrap">
 
 <div class="container">
 
@@ -224,6 +226,8 @@ Return Home
 
 </a>
 
+</div>
+
 <div id="footer"></div>
 
 <script>
@@ -235,6 +239,7 @@ document.getElementById(
 ).innerHTML=data;
 });
 </script>
+
 </div>
 
 </body>
