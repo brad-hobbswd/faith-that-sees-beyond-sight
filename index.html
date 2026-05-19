@@ -46,6 +46,16 @@ line-height:1.8;
 
 }
 
+.page-wrap{
+
+display:flex;
+
+flex-direction:column;
+
+min-height:100vh;
+
+}
+
 .hero{
 
 padding:50px 20px 90px;
@@ -202,6 +212,12 @@ font-size:.95rem;
 
 }
 
+#footer{
+
+margin-top:50px;
+
+}
+
 @media(max-width:768px){
 
 .hero h1{
@@ -228,6 +244,8 @@ padding:35px;
 </head>
 
 <body>
+
+<div class="page-wrap">
 
 <section class="hero">
 
@@ -259,7 +277,6 @@ Begin Reading
 </div>
 
 </section>
-
 
 <section class="section">
 
@@ -315,13 +332,17 @@ View Contents
 
 </section>
 
-<div class="footer">
+<div id="footer"></div>
 
-© Bradley Hobbs
-
-<br><br>
-
-Faith sees beyond what eyes can explain.
+<script>
+fetch("footer.html")
+.then(response=>response.text())
+.then(data=>{
+document.getElementById(
+"footer"
+).innerHTML=data;
+});
+</script>
 
 </div>
 
